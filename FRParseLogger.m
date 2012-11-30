@@ -62,6 +62,9 @@ static FRParseLogger *sharedLogger;
 
 - (void)logMessage:(DDLogMessage *) aLogMessage{
 
+	if (aLogMessage->logLevel == LOG_LEVEL_INFO) return;
+	if (aLogMessage->logLevel == LOG_LEVEL_VERBOSE) return;
+	
 	PFObject	*obj;
 	NSString	*logMsg = aLogMessage->logMsg;
 	
