@@ -42,8 +42,9 @@ static FRParseLogger *sharedLogger;
 	
 	if ((self = [super init]))
 	{
-		[Parse setApplicationId:@"YOUR_PARSE_ID"
-					  clientKey:@"YOUR_PARSE_KEY"];
+		// the app takes care of this!
+		//[Parse setApplicationId:@"YOUR_PARSE_ID"
+		//			  clientKey:@"YOUR_PARSE_KEY"];
 	}
 	return self;
 }
